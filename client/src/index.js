@@ -1,5 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { DrinksProvider } from "./components/Hooks/useContext";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <DrinksProvider>
+    <App />
+  </DrinksProvider>,
+  document.getElementById("root")
+);
