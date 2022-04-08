@@ -1,0 +1,82 @@
+import styled from "styled-components";
+
+import { BsArrowLeftCircle } from "react-icons/bs";
+import { useHistory } from "react-router-dom";
+
+const LetterIndex = () => {
+  const history = useHistory();
+
+  return (
+    <>
+      <Wrapper>
+        <Icon onClick={() => history.push("/categories")}>
+          <BsArrowLeftCircle className="icon" />
+        </Icon>
+        <Letter href="/letter/a">A</Letter>
+        <Letter href="/letter/b">B</Letter>
+        <Letter href="/letter/c">C</Letter>
+        <Letter href="/letter/d">D</Letter>
+        <Letter href="/letter/e">E</Letter>
+        <Letter href="/letter/f">F</Letter>
+        <Letter href="/letter/g">G</Letter>
+        <Letter href="/letter/h">H</Letter>
+        <Letter href="/letter/i">I</Letter>
+        <Letter href="/letter/j">J</Letter>
+        <Letter href="/letter/k">K</Letter>
+        <Letter href="/letter/l">L</Letter>
+        <Letter href="/letter/m">M</Letter>
+        <Letter href="/letter/n">N</Letter>
+        <Letter href="/letter/o">O</Letter>
+        <Letter href="/letter/p">P</Letter>
+        <Letter href="/letter/q">Q</Letter>
+        <Letter href="/letter/r">R</Letter>
+        <Letter href="/letter/s">S</Letter>
+        <Letter href="/letter/t">T</Letter>
+        <Letter href="/letter/v">V</Letter>
+        <Letter href="/letter/w">W</Letter>
+        <Letter href="/letter/x">X</Letter>
+        <Letter href="/letter/y">Y</Letter>
+        <Letter href="/letter/z">Z</Letter>
+        <Letter href="/letter/1">1</Letter>
+        <Letter href="/letter/2">2</Letter>
+        <Letter href="/letter/3">3</Letter>
+        <Letter href="/letter/4">4</Letter>
+        <Letter href="/letter/5">5</Letter>
+        <Letter href="/letter/6">6</Letter>
+        <Letter href="/letter/7">7</Letter>
+        <Letter href="/letter/9">9</Letter>
+      </Wrapper>
+    </>
+  );
+};
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: antiquewhite;
+`;
+
+const Icon = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+
+  .icon:hover {
+    font-weight: bolder;
+    cursor: pointer;
+  }
+`;
+
+const Letter = styled.a`
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin: 22px;
+`;
+
+export default LetterIndex;
