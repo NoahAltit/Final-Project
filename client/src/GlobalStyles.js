@@ -6,6 +6,11 @@ export default createGlobalStyle`
     background-color: #131313;
     color: #fff;
     font-family: "Raleway", sans-serif;
+  --green: #a2ccb6;
+  --light-peach: #ffecd9;
+  --peach: #ee786e;
+  --sand: #fceeb5;
+  --white: #fff;
   }
 
   html, body, div, span, applet, object, iframe,
