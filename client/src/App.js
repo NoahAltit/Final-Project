@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Categories from "./components/Categories/Categories";
+import CategList from "./components/Categories/Lists/CategList";
 import Debut from "./components/Debut/Debut";
 import VideoSection from "./components/Debut/VideoSection";
 import Header from "./components/Header/Header";
@@ -19,6 +21,12 @@ const App = () => {
           </Route>
           <Route path={"/home"}>
             <Home />
+          </Route>
+          <Route path={"/categories"}>
+            <Categories />
+          </Route>
+          <Route path={"/letter/:drinkLetter"}>
+            <CategList />
           </Route>
         </Switch>
       </BrowserRouter>
