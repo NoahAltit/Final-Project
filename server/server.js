@@ -5,6 +5,15 @@ const morgan = require("morgan");
 
 const PORT = 4000;
 
+const {
+  getCocktailsByLetter,
+  getCocktailsByName,
+  getCocktailsByCategory,
+  getCategoryList,
+  getGlassList,
+  getIngredientList,
+} = require("./handlersLocal");
+
 express()
   .use(function (req, res, next) {
     res.header(
@@ -22,5 +31,18 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
+
+  // REST Endpoints
+  .get("/letter/:drinkLetter", getCocktailsByLetter)
+  .get("/name/:drinkName", getCocktailsByName)
+  .get("/category/:categoryName", getCocktailsByCategory)
+
+  // ====== Extras ====== //
+  .get("/categoryList", getCategoryList)
+  .get("/glassList", getGlassList)
+  .get("/ingredientsList", getIngredientList)
+  // ====== Extras ====== //
+
+  // REST Endpoints
 
   .listen(PORT, () => console.info(`🌎 Listening on port ${PORT}`));
