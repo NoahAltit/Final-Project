@@ -19,7 +19,7 @@ const SecTwo = () => {
               <>
                 <RandomCocktails key={drink.idDrink}>
                   <CocktailImg src={drink.strDrinkThumb} />
-                  <CocktailName>{drink.strDrink}</CocktailName>
+                  <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
                 </RandomCocktails>
               </>
             );
@@ -29,7 +29,7 @@ const SecTwo = () => {
               <>
                 <RandomCocktails key={drink.idDrink}>
                   <CocktailImg src={drink.strDrinkThumb} />
-                  <CocktailName>{drink.strDrink}</CocktailName>
+                  <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
                 </RandomCocktails>
               </>
             );
@@ -45,11 +45,11 @@ const Section = styled.section`
   width: 100vw;
   display: grid;
   overflow: hidden;
+  background-color: #1f1f1f;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  /* background-color: cadetblue; */
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -69,11 +69,13 @@ const CocktailsWrapper = styled.div`
 `;
 
 const RandomCocktails = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 30px;
+  transition: all 0.4s ease-in-out;
 `;
 
 const CocktailImg = styled.img`
@@ -89,9 +91,10 @@ const CocktailImg = styled.img`
 `;
 
 const CocktailName = styled.p`
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 5px;
   margin-top: 20px;
+  font-family: "Cleavers Juvenia";
 `;
 
 export default SecTwo;

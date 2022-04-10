@@ -49,6 +49,7 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #131313;
 `;
 
 const Loader = styled.div`

@@ -13,11 +13,11 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <Wrapper>
-          <Logo>KÒKTEL</Logo>
+          <Logo href="/home">KÒKTEL</Logo>
           <NavMenu>
             <NavList>
               <NavItem>
-                <LinkNav>Home</LinkNav>
+                <LinkNav href="/home">Home</LinkNav>
               </NavItem>
               <NavItem>
                 <LinkNav href="/categories">Categories</LinkNav>
@@ -61,8 +61,12 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.h2`
-  cursor: pointer;
+const Logo = styled.a`
+  color: white;
+  text-decoration: none;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
 `;
 
 const Spacer = styled.div`

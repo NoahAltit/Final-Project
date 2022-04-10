@@ -34,7 +34,6 @@ const LetterIndex = () => {
         <Letter href="/letter/t">T</Letter>
         <Letter href="/letter/v">V</Letter>
         <Letter href="/letter/w">W</Letter>
-        <Letter href="/letter/x">X</Letter>
         <Letter href="/letter/y">Y</Letter>
         <Letter href="/letter/z">Z</Letter>
         <Letter href="/letter/1">1</Letter>
@@ -51,11 +50,19 @@ const LetterIndex = () => {
 };
 
 const Wrapper = styled.div`
+  position: fixed;
+  padding-left: 80px;
+  padding-right: 66px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: antiquewhite;
+  /* background-color: #5f99fa; */
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(45, 116, 213, 1) 11.2%,
+    rgba(121, 137, 212, 1) 91.2%
+  );
 `;
 
 const Icon = styled.div`
@@ -64,7 +71,7 @@ const Icon = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  color: black;
+  color: white;
 
   .icon:hover {
     font-weight: bolder;
@@ -74,7 +81,7 @@ const Icon = styled.div`
 
 const Letter = styled.a`
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
   margin: 22px;
 `;
