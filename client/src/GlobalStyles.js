@@ -3,14 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export default createGlobalStyle`
   :root {
     /* background-color: #050503; */
-    background-color: #131313;
     color: #fff;
     font-family: "Raleway", sans-serif;
-  --green: #a2ccb6;
-  --light-peach: #ffecd9;
-  --peach: #ee786e;
-  --sand: #fceeb5;
-  --white: #fff;
   }
 
   html, body, div, span, applet, object, iframe,
@@ -40,6 +34,7 @@ export default createGlobalStyle`
   }
   body {
       line-height: 1;
+      background-image: linear-gradient(63deg, #48378e, #849cfd 100%);
   }
   ol, ul {
       list-style: none;
@@ -79,7 +74,21 @@ input {
     padding: 0 12px;
   }
 
-  ::-webkit-scrollbar {
+  /* ::-webkit-scrollbar {
     display: none;
+  } */
+
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(171,102,255,1) 0%, rgba(116,182,247,1) 90% );
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient( 109.6deg,  rgba(45,116,213,1) 11.2%, rgba(121,137,212,1) 91.2% );
   }
 `;

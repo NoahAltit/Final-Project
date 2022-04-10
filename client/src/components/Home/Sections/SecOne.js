@@ -1,14 +1,13 @@
 import styled, { keyframes } from "styled-components";
-import bg from "../../../assets/Bg.jpg";
-// import bg from "../../../assets/OtherBg.jpg";
 
+import koktel from "../../../assets/Koktel.jpg";
 import { BsMouse } from "react-icons/bs";
 
 const SecOne = () => {
   return (
     <Wrapper>
       <ImgWrap>
-        <Img src={bg} />
+        <Img src={koktel} />
       </ImgWrap>
       <InnerWrap>
         {/* <CircularText>The Future's Bright. The Future's Cocktail.</CircularText> */}
