@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { BsArrowLeftCircle } from "react-icons/bs";
+
 import LetterIndex from "../LetterIndex";
 
 const CocktailList = () => {
   const { drinkLetter } = useParams();
   const [drinks, setDrinks] = useState(null);
-  const [isShown, setIsShown] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     fetch(`/letter/${drinkLetter}`)
@@ -24,7 +27,10 @@ const CocktailList = () => {
   return (
     <>
       <Title>{` ${drinkLetter.toUpperCase()}`}</Title>
-      <LetterIndex />
+      {/* <LetterIndex /> */}
+      <Icon onClick={() => history.push("/categories")}>
+        <BsArrowLeftCircle className="icon" /> Categories
+      </Icon>
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (
@@ -53,13 +59,37 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   margin: auto;
-  overflow: auto;
+  overflow-y: hidden;
 `;
 
 const Title = styled.h1`
   margin-top: 100px;
   position: fixed;
   left: 50%;
+`;
+
+const Icon = styled.div`
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 2px;
+
+  .icon {
+    margin-right: 10px;
+    font-size: 30px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const InnerWrapper = styled.div`
