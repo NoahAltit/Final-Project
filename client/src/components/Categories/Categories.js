@@ -4,6 +4,7 @@ import GlassTypes from "./Lists/GlassTypes";
 import IngredientsList from "./Lists/IngredientsList";
 import Header from "../Header/Header";
 import styled from "styled-components";
+import CategoryList from "./Lists/CategoryList";
 
 const Categories = () => {
   return (
@@ -12,13 +13,12 @@ const Categories = () => {
       <Wrapper>
         <LetterIndex />
       </Wrapper>
+      <CategoryList />
     </>
   );
 };
 
 const Wrapper = styled.div`
-  width: 100vw;
-  height: 100vh;
   padding-top: 80px;
 `;
 

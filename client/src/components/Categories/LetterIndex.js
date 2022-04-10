@@ -9,9 +9,6 @@ const LetterIndex = () => {
   return (
     <>
       <Wrapper>
-        <Icon onClick={() => history.push("/categories")}>
-          <BsArrowLeftCircle className="icon" />
-        </Icon>
         <Letter href="/letter/a">A</Letter>
         <Letter href="/letter/b">B</Letter>
         <Letter href="/letter/c">C</Letter>
@@ -50,7 +47,6 @@ const LetterIndex = () => {
 };
 
 const Wrapper = styled.div`
-  position: fixed;
   padding-left: 80px;
   padding-right: 66px;
   display: flex;
@@ -65,25 +61,17 @@ const Wrapper = styled.div`
   );
 `;
 
-const Icon = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  color: white;
-
-  .icon:hover {
-    font-weight: bolder;
-    cursor: pointer;
-  }
-`;
-
 const Letter = styled.a`
   text-decoration: none;
   color: white;
+  font-size: 20px;
   font-weight: bold;
   margin: 22px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: black;
+  }
 `;
 
 export default LetterIndex;
