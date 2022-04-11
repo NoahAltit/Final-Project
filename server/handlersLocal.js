@@ -58,6 +58,25 @@ const getCocktailsByCategory = async (req, res) => {
   }
 };
 
+const getCocktailsByGlassType = async (req, res) => {
+  try {
+    const glassType = req.params.glassType;
+
+    const requestCocktails = await fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?g=${glassType}`
+    );
+    const cocktails = await requestCocktails.json();
+
+    res.status(200).json({ status: 200, data: cocktails });
+  } catch (err) {
+    res.status(404).json({
+      status: 404,
+      message: "Drinks not found. You're seeing double I guarantee it.",
+    });
+    console.log(err);
+  }
+};
+
 const getCategoryList = async (req, res) => {
   try {
     const requestCategories = await fetch(
@@ -114,6 +133,7 @@ module.exports = {
   getCocktailsByLetter,
   getCocktailsByName,
   getCocktailsByCategory,
+  getCocktailsByGlassType,
   getCategoryList,
   getGlassList,
   getIngredientList,

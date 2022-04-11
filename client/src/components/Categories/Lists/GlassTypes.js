@@ -8,16 +8,19 @@ import cocktail from "../../../assets/Glass Types/Cocktail.png";
 import oldfash from "../../../assets/Glass Types/OldFash.png";
 import whiskey from "../../../assets/Glass Types/Whiskey.png";
 import collins from "../../../assets/Glass Types/Collins.png";
+import { useHistory } from "react-router-dom";
 
 const GlassTypes = () => {
   const [glasses, setGlasses] = useState(null);
   const [showMore, setShowMore] = useState(false);
 
+  const history = useHistory();
+
   useEffect(() => {
     fetch("/glassList")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.data);
+        // console.log(data.data);
         setGlasses(data.data);
       });
   }, []);
@@ -27,33 +30,47 @@ const GlassTypes = () => {
   }
 
   const more = glasses.drinks.slice(5, 32);
-  console.log(more);
 
   return (
     <Section>
       <Title>Glass Types</Title>
       <Wrapper>
-        <GlassWrap className="highball">
+        <GlassWrap
+          className="highball"
+          onClick={() => history.push("/glass/highball glass")}
+        >
           <GlassImg src={highball} />
           <Line />
           <GlassType>Highball Glass</GlassType>
         </GlassWrap>
-        <GlassWrap className="cocktail">
+        <GlassWrap
+          className="cocktail"
+          onClick={() => history.push("/glass/cocktail glass")}
+        >
           <GlassImg src={cocktail} />
           <Line />
           <GlassType>Cocktail Glass</GlassType>
         </GlassWrap>
-        <GlassWrap className="oldfash">
+        <GlassWrap
+          className="oldfash"
+          onClick={() => history.push("/glass/old-fashioned glass")}
+        >
           <GlassImg src={oldfash} />
           <Line />
           <GlassType>Old-Fashioned Glass</GlassType>
         </GlassWrap>
-        <GlassWrap className="whiskey">
+        <GlassWrap
+          className="whiskey"
+          onClick={() => history.push("/glass/whiskey glass")}
+        >
           <GlassImg src={whiskey} />
           <Line />
           <GlassType>Whiskey Glass</GlassType>
         </GlassWrap>
-        <GlassWrap className="collins">
+        <GlassWrap
+          className="collins"
+          onClick={() => history.push("/glass/collins glass")}
+        >
           <GlassImg src={collins} />
           <Line />
           <GlassType>Collins Glass</GlassType>
@@ -68,7 +85,13 @@ const GlassTypes = () => {
           {showMore && (
             <List>
               {more.map((glass) => {
-                return <Glass>{glass.strGlass}</Glass>;
+                return (
+                  <Glass
+                    onClick={() => history.push(`/glass/${glass.strGlass}`)}
+                  >
+                    {glass.strGlass}
+                  </Glass>
+                );
               })}
             </List>
           )}
