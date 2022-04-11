@@ -9,6 +9,7 @@ const {
   getCocktailsByLetter,
   getCocktailsByName,
   getCocktailsByCategory,
+  getCocktailsByGlassType,
   getCategoryList,
   getGlassList,
   getIngredientList,
@@ -36,6 +37,7 @@ express()
   .get("/letter/:drinkLetter", getCocktailsByLetter)
   .get("/name/:drinkName", getCocktailsByName)
   .get("/category/:categoryName", getCocktailsByCategory)
+  .get("/glass/:glassType", getCocktailsByGlassType)
 
   // ====== Extras ====== //
   .get("/categoryList", getCategoryList)
