@@ -12,14 +12,14 @@ export const DrinksProvider = ({ children }) => {
     fetch(`${url}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDrinks(data);
       });
 
     fetch(`${url}`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setDrinksTwo(data);
       });
   }, []);

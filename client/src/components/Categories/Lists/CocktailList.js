@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { BsArrowLeftCircle } from "react-icons/bs";
 
-import LetterIndex from "../LetterIndex";
-
 const CocktailList = () => {
   const { drinkLetter } = useParams();
   const [drinks, setDrinks] = useState(null);
+  const [style, setStyle] = useState("");
   const history = useHistory();
 
   useEffect(() => {
@@ -27,7 +26,6 @@ const CocktailList = () => {
   return (
     <>
       <Title>{` ${drinkLetter.toUpperCase()}`}</Title>
-      {/* <LetterIndex /> */}
       <Icon onClick={() => history.push("/categories")}>
         <BsArrowLeftCircle className="icon" /> Categories
       </Icon>
@@ -82,13 +80,13 @@ const Icon = styled.div`
   transition: all 0.3s ease-in-out;
   letter-spacing: 2px;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
   .icon {
     margin-right: 10px;
     font-size: 30px;
-  }
-
-  &:hover {
-    opacity: 0.7;
   }
 `;
 

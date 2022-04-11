@@ -1,5 +1,4 @@
 import LetterIndex from "./LetterIndex";
-import CategList from "./Lists/CocktailList";
 import GlassTypes from "./Lists/GlassTypes";
 import IngredientsList from "./Lists/IngredientsList";
 import Header from "../Header/Header";
@@ -14,6 +13,7 @@ const Categories = () => {
         <LetterIndex />
       </Wrapper>
       <CategoryList />
+      <GlassTypes />
     </>
   );
 };
