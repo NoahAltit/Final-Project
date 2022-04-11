@@ -8,7 +8,6 @@ import { BsArrowLeftCircle } from "react-icons/bs";
 const CocktailList = () => {
   const { drinkLetter } = useParams();
   const [drinks, setDrinks] = useState(null);
-  const [style, setStyle] = useState("");
   const history = useHistory();
 
   useEffect(() => {

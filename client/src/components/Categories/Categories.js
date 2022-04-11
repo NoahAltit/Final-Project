@@ -1,6 +1,5 @@
 import LetterIndex from "./LetterIndex";
 import GlassTypes from "./Lists/GlassTypes";
-import IngredientsList from "./Lists/IngredientsList";
 import Header from "../Header/Header";
 import styled from "styled-components";
 import CategoryList from "./Lists/CategoryList";
