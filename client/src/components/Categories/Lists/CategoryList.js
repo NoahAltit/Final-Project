@@ -112,7 +112,9 @@ const Wrapper = styled.div`
   padding-top: 2rem;
 `;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin-bottom: 70px;
+`;
 
 const CategWrap = styled.div`
   width: 300px;
@@ -189,6 +191,11 @@ const CategWrap = styled.div`
 
 const CategImg = styled.img`
   width: 200px;
+  transition: all 0.3s ease-in-out;
+
+  /* &:hover {
+    transform: scale(1.2);
+  } */
 `;
 
 const CategName = styled.h1`
@@ -196,6 +203,7 @@ const CategName = styled.h1`
   padding: 0 80px;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  z-index: 5;
 `;
 
 export default CategoryList;
