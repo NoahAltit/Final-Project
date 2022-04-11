@@ -36,57 +36,90 @@ const CategoryList = () => {
     <Section>
       <Title>Categories</Title>
       <Wrapper>
-        <CategWrap className="ordinary">
+        <CategWrap
+          className="ordinary"
+          onClick={() => history.push("/category/Ordinary drink")}
+        >
           <CategImg src={ordinary} />
           <CategName>Ordinary Drink</CategName>
         </CategWrap>
 
-        <CategWrap className="cocktail">
+        <CategWrap
+          className="cocktail"
+          onClick={() => history.push("/category/cocktail")}
+        >
           <CategImg src={cocktail} />
           <CategName>Cocktail</CategName>
         </CategWrap>
 
-        <CategWrap className="shake">
+        <CategWrap
+          className="shake"
+          onClick={() => history.push("/category/shake")}
+        >
           <CategImg src={shake} />
           <CategName>Shake</CategName>
         </CategWrap>
 
-        <CategWrap className="cocoa">
+        <CategWrap
+          className="cocoa"
+          onClick={() => history.push("/category/cocoa")}
+        >
           <CategImg src={cocoa} />
           <CategName>Cocoa</CategName>
         </CategWrap>
 
-        <CategWrap className="shot">
+        <CategWrap
+          className="shot"
+          onClick={() => history.push("/category/shot")}
+        >
           <CategImg src={shot} />
           <CategName>Shot</CategName>
         </CategWrap>
 
-        <CategWrap className="coftea">
+        <CategWrap
+          className="coftea"
+          // onClick={() => history.push("/category/coftea")}
+        >
           <CategImg src={coftea} />
           <CategName>Coffee / Tea</CategName>
         </CategWrap>
 
-        <CategWrap className="homemade">
+        <CategWrap
+          className="homemade"
+          onClick={() => history.push("/category/homemade liqueur")}
+        >
           <CategImg src={homemade} />
           <CategName>Homemade Liqueur</CategName>
         </CategWrap>
 
-        <CategWrap className="party">
+        <CategWrap
+          className="party"
+          // onClick={() => history.push("/category/")}
+        >
           <CategImg src={party} />
           <CategName>Party Drink</CategName>
         </CategWrap>
 
-        <CategWrap className="beer">
+        <CategWrap
+          className="beer"
+          onClick={() => history.push("/category/beer")}
+        >
           <CategImg src={beer} />
           <CategName>Beer</CategName>
         </CategWrap>
 
-        <CategWrap className="soft">
+        <CategWrap
+          className="soft"
+          onClick={() => history.push("/category/soft drink")}
+        >
           <CategImg src={soft} />
           <CategName>Soft Drink</CategName>
         </CategWrap>
 
-        <CategWrap className="mystery">
+        <CategWrap
+          className="mystery"
+          // onClick={() => history.push("/category/")}
+        >
           <CategImg src={mystery} />
           <CategName>Mystery</CategName>
         </CategWrap>
