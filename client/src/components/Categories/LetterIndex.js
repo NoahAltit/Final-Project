@@ -47,8 +47,6 @@ const LetterIndex = () => {
 };
 
 const Wrapper = styled.div`
-  padding-left: 80px;
-  padding-right: 66px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -70,7 +68,9 @@ const Letter = styled.a`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    color: black;
+    padding: 10px;
+    background-color: deepskyblue;
+    border-radius: 50%;
   }
 `;
 
