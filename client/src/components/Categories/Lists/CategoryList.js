@@ -118,7 +118,7 @@ const CategoryList = () => {
 
         <CategWrap
           className="mystery"
-          // onClick={() => history.push("/category/")}
+          onClick={() => history.push("/category/Other/Unknown")}
         >
           <CategImg src={mystery} />
           <CategName>Mystery</CategName>
