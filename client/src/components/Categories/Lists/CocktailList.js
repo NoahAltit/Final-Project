@@ -31,7 +31,9 @@ const CocktailList = () => {
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (
-            <InnerWrapper>
+            <InnerWrapper
+              onClick={() => history.push(`/name/${drink.strDrink}`)}
+            >
               <DrinkImg src={drink.strDrinkThumb} />
               <DrinkName>{drink.strDrink}</DrinkName>
               <RecipeDiv className="recipeDiv">

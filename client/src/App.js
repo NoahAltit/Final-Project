@@ -7,6 +7,7 @@ import Debut from "./components/Debut/Debut";
 import VideoSection from "./components/Debut/VideoSection";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
+import Ingredients from "./components/Ingredients/Ingredients";
 import GlobalStyles from "./GlobalStyles";
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
           </Route>
           <Route path={"/glass/:glassType"}>
             <DrinksByGlassTypes />
+          </Route>
+          <Route path={"/name/:drinkName"}>
+            <Ingredients />
           </Route>
         </Switch>
       </BrowserRouter>
