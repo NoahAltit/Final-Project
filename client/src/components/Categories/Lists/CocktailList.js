@@ -97,14 +97,24 @@ const InnerWrapper = styled.div`
   justify-content: center;
   margin-left: 10px;
   margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
   .recipeDiv {
-    transition: all 0.4s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
   }
 
-  .recipeDiv:hover {
-    opacity: 1;
+  div > &:hover {
+    .recipeDiv {
+      opacity: 1;
+    }
+
+    h5,
+    img {
+      transition: all 0.3s ease-in-out;
+      filter: brightness(70%);
+    }
   }
 `;
 
@@ -119,19 +129,28 @@ const DrinkName = styled.h5`
   letter-spacing: 4px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  transition: all 0.3s ease-in-out;
 `;
 
 const DrinkImg = styled.img`
   width: 400px;
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 `;
 
 const RecipeDiv = styled.div`
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 100%;
   font-family: "Cleavers Juvenia";
+
+  &:hover {
+  }
 
   &:active {
     transform: scale(0.97);
@@ -139,10 +158,10 @@ const RecipeDiv = styled.div`
 `;
 
 const Button = styled.a`
-  border-radius: 0 30px;
+  border-radius: 0 60px;
   min-width: 340px;
   min-height: 60px;
-  line-height: 60px;
+  line-height: 30px;
   background-color: #5f9bfc;
   letter-spacing: 5px;
   text-decoration: none;
