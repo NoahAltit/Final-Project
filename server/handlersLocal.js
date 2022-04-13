@@ -129,48 +129,48 @@ const getIngredientList = async (req, res) => {
   }
 };
 
-const { accounts } = require("./data/accounts");
+// const { accounts } = require("./data/accounts");
 
-const loginAccount = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+// const loginAccount = async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
 
-    const user = accounts.find((user) => user.email === email);
+//     const user = accounts.find((user) => user.email === email);
 
-    console.log("Login", user);
+//     console.log("Login", user);
 
-    user && user.password === password
-      ? res.status(201).json({ status: 201, message: "Logged in successfully" })
-      : res
-          .status(404)
-          .json({ status: 404, message: "Account details do not match." });
-  } catch (err) {
-    console.log(err);
-  }
-};
+//     user && user.password === password
+//       ? res.status(201).json({ status: 201, message: "Logged in successfully" })
+//       : res
+//           .status(404)
+//           .json({ status: 404, message: "Account details do not match." });
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
-const createAccount = async (req, res) => {
-  try {
-    const { email, password } = req.body;
+// const createAccount = async (req, res) => {
+//   try {
+//     const { email, password } = req.body;
 
-    const user = accounts.find((user) => user.email === email);
-    console.log("Sign Up", user);
+//     const user = accounts.find((user) => user.email === email);
+//     console.log("Sign Up", user);
 
-    if (user) {
-      res.status(400).json({
-        status: 400,
-        message: "Seems like an account is already linked to this email.",
-      });
-    } else {
-      accounts.push({ email, password });
-      res
-        .status(201)
-        .json({ status: 201, message: "Account created successfully." });
-    }
-  } catch (err) {
-    console.log(err);
-  }
-};
+//     if (user) {
+//       res.status(400).json({
+//         status: 400,
+//         message: "Seems like an account is already linked to this email.",
+//       });
+//     } else {
+//       accounts.push({ email, password });
+//       res
+//         .status(201)
+//         .json({ status: 201, message: "Account created successfully." });
+//     }
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
 module.exports = {
   getCocktailsByLetter,
@@ -180,6 +180,6 @@ module.exports = {
   getCategoryList,
   getGlassList,
   getIngredientList,
-  loginAccount,
-  createAccount,
+  // loginAccount,
+  // createAccount,
 };

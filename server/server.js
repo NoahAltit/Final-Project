@@ -13,9 +13,11 @@ const {
   getCategoryList,
   getGlassList,
   getIngredientList,
-  loginAccount,
-  createAccount,
+  // loginAccount,
+  // createAccount,
 } = require("./handlersLocal");
+
+const { loginAccount, createAccount } = require("./handlers");
 
 express()
   .use(function (req, res, next) {
