@@ -35,7 +35,7 @@ const Ingredients = () => {
               <BsArrowLeftCircle className="icon" /> Drink Category
             </Icon>
             <Icon2 onClick={() => history.push(`/glass/${drink.strGlass}`)}>
-              Glass Type Category <BsArrowRightCircle className="icon2" />
+              Glass Type <BsArrowRightCircle className="icon2" />
             </Icon2>
             <Title>{drink.strDrink}</Title>
             <Wrapper>
@@ -287,7 +287,8 @@ const Info = styled.div`
 `;
 
 const DrinkImg = styled.img`
-  width: 450px;
+  width: 420px;
+  height: 420px;
   border-radius: 20px;
   margin-right: 20px;
 `;

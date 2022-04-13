@@ -5,9 +5,9 @@ import DrinksByCategory from "./components/Categories/Lists/DrinksByCategory";
 import DrinksByGlassTypes from "./components/Categories/Lists/DrinksByGlassTypes";
 import Debut from "./components/Debut/Debut";
 import VideoSection from "./components/Debut/VideoSection";
-import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Ingredients from "./components/Ingredients/Ingredients";
+import SignIn from "./components/Sign in/SignIn";
 import GlobalStyles from "./GlobalStyles";
 
 const App = () => {
@@ -17,6 +17,9 @@ const App = () => {
       <BrowserRouter>
         <Switch>
           <Route exact path={"/"}>
+            <SignIn />
+          </Route>
+          <Route path={"/adventure"}>
             <Debut />
           </Route>
           <Route path={"/video"}>

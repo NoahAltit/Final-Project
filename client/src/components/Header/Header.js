@@ -25,9 +25,6 @@ const Header = () => {
               <NavItem>
                 <LinkNav>Favorites</LinkNav>
               </NavItem>
-              <NavItem>
-                <LinkNav>Contact</LinkNav>
-              </NavItem>
             </NavList>
           </NavMenu>
         </Wrapper>
