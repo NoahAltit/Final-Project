@@ -3,12 +3,13 @@ import Categories from "./components/Categories/Categories";
 import CocktailList from "./components/Categories/Lists/CocktailList";
 import DrinksByCategory from "./components/Categories/Lists/DrinksByCategory";
 import DrinksByGlassTypes from "./components/Categories/Lists/DrinksByGlassTypes";
-import Debut from "./components/Debut/Debut";
-import VideoSection from "./components/Debut/VideoSection";
+import Debut from "./components/Adventure/Debut";
+import VideoSection from "./components/Adventure/VideoSection";
 import Home from "./components/Home/Home";
 import Ingredients from "./components/Ingredients/Ingredients";
 import SignIn from "./components/Sign in/SignIn";
 import GlobalStyles from "./GlobalStyles";
+import Favorites from "./components/Favorites/Favorites";
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
           </Route>
           <Route path={"/categories"}>
             <Categories />
+          </Route>
+          <Route path={"/favorites"}>
+            <Favorites />
           </Route>
           <Route path={"/letter/:drinkLetter"}>
             <CocktailList />

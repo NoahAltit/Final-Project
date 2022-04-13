@@ -8,9 +8,7 @@ const Categories = () => {
   return (
     <Section>
       <Header />
-      <Wrapper>
-        <LetterIndex />
-      </Wrapper>
+      <LetterIndex />
       <CategoryList />
       <GlassTypes />
     </Section>
@@ -19,10 +17,6 @@ const Categories = () => {
 
 const Section = styled.section`
   overflow: hidden;
-`;
-
-const Wrapper = styled.div`
-  padding-top: 80px;
 `;
 
 export default Categories;
