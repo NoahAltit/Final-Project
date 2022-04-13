@@ -11,7 +11,7 @@ const Message = ({ setPageDisplay, pageDisplay }) => {
     setTimeout(() => {
       setUserInfo({ email: pageDisplay.email });
       history.push("/adventure");
-    }, 4000);
+    }, 5000);
   }
 
   return (
@@ -29,7 +29,8 @@ const Message = ({ setPageDisplay, pageDisplay }) => {
       )}
       {pageDisplay.status === 201 && pageDisplay.ref === "signup" && (
         <LinkDiv onClick={() => history.push("/adventure")}>
-          You are now being redirected. Or, click here to go now
+          <p>You are now being redirected.</p>
+          <p>Click here if you are not redirected after 5 seconds.</p>
         </LinkDiv>
       )}
     </Wrapper>
@@ -58,6 +59,11 @@ const LinkDiv = styled.button`
   font-size: 14px;
   font-weight: 700;
   cursor: pointer;
+
+  > p {
+    font-size: 15px;
+    margin: 20px 0;
+  }
 `;
 
 export default Message;

@@ -57,7 +57,7 @@ const SignUpForm = ({ setPageDisplay }) => {
       </Form>
       <Line />
       <SignUpLine>
-        Already a member?{" "}
+        Already a member?
         <button onClick={() => setPageDisplay("signin")}>
           Click here to sign in
         </button>
