@@ -1,9 +1,11 @@
 import { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { DrinksContext } from "../../Hooks/useContext";
 
 const SecTwo = () => {
   const { drinks, drinksTwo } = useContext(DrinksContext);
+  const history = useHistory();
 
   if (!drinks || !drinksTwo) {
     return <p>Loading...</p>;
@@ -17,7 +19,10 @@ const SecTwo = () => {
           {drinks.drinks.map((drink) => {
             return (
               <>
-                <RandomCocktails key={drink.idDrink}>
+                <RandomCocktails
+                  key={drink.idDrink}
+                  onClick={() => history.push(`/name/${drink.strDrink}`)}
+                >
                   <CocktailImg src={drink.strDrinkThumb} />
                   <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
                 </RandomCocktails>
@@ -27,7 +32,10 @@ const SecTwo = () => {
           {drinksTwo.drinks.map((drink) => {
             return (
               <>
-                <RandomCocktails key={drink.idDrink}>
+                <RandomCocktails
+                  key={drink.idDrink}
+                  onClick={() => history.push(`/name/${drink.strDrink}`)}
+                >
                   <CocktailImg src={drink.strDrinkThumb} />
                   <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
                 </RandomCocktails>

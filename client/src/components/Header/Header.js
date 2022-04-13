@@ -23,7 +23,7 @@ const Header = () => {
                 <LinkNav href="/categories">Categories</LinkNav>
               </NavItem>
               <NavItem>
-                <LinkNav>Favorites</LinkNav>
+                <LinkNav href="/favorites">Favorites</LinkNav>
               </NavItem>
             </NavList>
           </NavMenu>
@@ -42,7 +42,7 @@ const HeaderWrapper = styled.header`
   width: 100%;
   max-height: 500px;
   z-index: 100;
-  position: fixed;
+  /* position: fixed; */
   /* top: 0; */
   /* left: 0; */
   font-family: "Open Sans", sans-serif;

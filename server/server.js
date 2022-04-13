@@ -13,8 +13,8 @@ const {
   getCategoryList,
   getGlassList,
   getIngredientList,
-  // loginAccount,
-  // createAccount,
+  getFavorites,
+  addFavorites,
 } = require("./handlersLocal");
 
 const { loginAccount, createAccount } = require("./handlers");
@@ -53,6 +53,11 @@ express()
   .post("/login-account", loginAccount)
   .post("/create-account", createAccount)
   // ====== Account ====== //
+
+  // ====== Favorites ====== //
+  .get("/favorites", getFavorites)
+  .post("/favorites/add", addFavorites)
+  // ====== Favorites ====== //
 
   // REST Endpoints
 
