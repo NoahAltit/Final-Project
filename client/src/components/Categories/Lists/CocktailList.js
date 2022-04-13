@@ -158,14 +158,15 @@ const RecipeDiv = styled.div`
   }
 `;
 
-const Button = styled.a`
+const Button = styled.button`
   border-radius: 0 60px;
   min-width: 340px;
   min-height: 60px;
   line-height: 30px;
   background-color: #5f9bfc;
   letter-spacing: 5px;
-  text-decoration: none;
+  outline: none;
+  border: none;
   padding: 13px 30px;
   cursor: pointer;
 `;

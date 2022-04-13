@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 
@@ -9,38 +10,38 @@ const LetterIndex = () => {
   return (
     <>
       <Wrapper>
-        <Letter href="/letter/a">A</Letter>
-        <Letter href="/letter/b">B</Letter>
-        <Letter href="/letter/c">C</Letter>
-        <Letter href="/letter/d">D</Letter>
-        <Letter href="/letter/e">E</Letter>
-        <Letter href="/letter/f">F</Letter>
-        <Letter href="/letter/g">G</Letter>
-        <Letter href="/letter/h">H</Letter>
-        <Letter href="/letter/i">I</Letter>
-        <Letter href="/letter/j">J</Letter>
-        <Letter href="/letter/k">K</Letter>
-        <Letter href="/letter/l">L</Letter>
-        <Letter href="/letter/m">M</Letter>
-        <Letter href="/letter/n">N</Letter>
-        <Letter href="/letter/o">O</Letter>
-        <Letter href="/letter/p">P</Letter>
-        <Letter href="/letter/q">Q</Letter>
-        <Letter href="/letter/r">R</Letter>
-        <Letter href="/letter/s">S</Letter>
-        <Letter href="/letter/t">T</Letter>
-        <Letter href="/letter/v">V</Letter>
-        <Letter href="/letter/w">W</Letter>
-        <Letter href="/letter/y">Y</Letter>
-        <Letter href="/letter/z">Z</Letter>
-        <Letter href="/letter/1">1</Letter>
-        <Letter href="/letter/2">2</Letter>
-        <Letter href="/letter/3">3</Letter>
-        <Letter href="/letter/4">4</Letter>
-        <Letter href="/letter/5">5</Letter>
-        <Letter href="/letter/6">6</Letter>
-        <Letter href="/letter/7">7</Letter>
-        <Letter href="/letter/9">9</Letter>
+        <Letter to="/letter/a">A</Letter>
+        <Letter to="/letter/b">B</Letter>
+        <Letter to="/letter/c">C</Letter>
+        <Letter to="/letter/d">D</Letter>
+        <Letter to="/letter/e">E</Letter>
+        <Letter to="/letter/f">F</Letter>
+        <Letter to="/letter/g">G</Letter>
+        <Letter to="/letter/h">H</Letter>
+        <Letter to="/letter/i">I</Letter>
+        <Letter to="/letter/j">J</Letter>
+        <Letter to="/letter/k">K</Letter>
+        <Letter to="/letter/l">L</Letter>
+        <Letter to="/letter/m">M</Letter>
+        <Letter to="/letter/n">N</Letter>
+        <Letter to="/letter/o">O</Letter>
+        <Letter to="/letter/p">P</Letter>
+        <Letter to="/letter/q">Q</Letter>
+        <Letter to="/letter/r">R</Letter>
+        <Letter to="/letter/s">S</Letter>
+        <Letter to="/letter/t">T</Letter>
+        <Letter to="/letter/v">V</Letter>
+        <Letter to="/letter/w">W</Letter>
+        <Letter to="/letter/y">Y</Letter>
+        <Letter to="/letter/z">Z</Letter>
+        <Letter to="/letter/1">1</Letter>
+        <Letter to="/letter/2">2</Letter>
+        <Letter to="/letter/3">3</Letter>
+        <Letter to="/letter/4">4</Letter>
+        <Letter to="/letter/5">5</Letter>
+        <Letter to="/letter/6">6</Letter>
+        <Letter to="/letter/7">7</Letter>
+        <Letter to="/letter/9">9</Letter>
       </Wrapper>
     </>
   );
@@ -59,7 +60,7 @@ const Wrapper = styled.div`
   );
 `;
 
-const Letter = styled.a`
+const Letter = styled(Link)`
   text-decoration: none;
   color: white;
   font-size: 20px;

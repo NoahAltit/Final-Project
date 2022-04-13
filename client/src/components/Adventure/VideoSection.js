@@ -4,6 +4,7 @@ import vid from "../../assets/vid.mp4";
 import poster from "../../assets/Poster.png";
 import vidbg from "../../assets/VidBg.jpg";
 
+import { Link } from "react-router-dom";
 import { IoMdRemoveCircleOutline } from "react-icons/io";
 
 const VideoSection = () => {
@@ -14,9 +15,9 @@ const VideoSection = () => {
           <Source src={vid} type="video/mp4" />
         </Video>
         <Icon>
-          <a href="/home">
+          <Link to="/home">
             <IoMdRemoveCircleOutline className="escape" />
-          </a>
+          </Link>
         </Icon>
       </VideoContent>
     </Wrapper>

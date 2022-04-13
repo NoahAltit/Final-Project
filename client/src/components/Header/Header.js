@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import styled from "styled-components";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   //   const [showHeader, setShowHeader] = useState(false);
@@ -13,23 +13,28 @@ const Header = () => {
     <>
       <HeaderWrapper>
         <Wrapper>
-          <Logo href="/home">KÒKTEL</Logo>
+          <Logo to="/home">KÒKTEL</Logo>
           <NavMenu>
             <NavList>
               <NavItem>
-                <LinkNav href="/home">Home</LinkNav>
+                <NavLink to="/home" activeClassName="homeActive">
+                  Home
+                </NavLink>
               </NavItem>
               <NavItem>
-                <LinkNav href="/categories">Categories</LinkNav>
+                <NavLink to="/categories" activeClassName="categActive">
+                  Categories
+                </NavLink>
               </NavItem>
               <NavItem>
-                <LinkNav href="/favorites">Favorites</LinkNav>
+                <NavLink to="/favorites" activeClassName="favoActive">
+                  Favorites
+                </NavLink>
               </NavItem>
             </NavList>
           </NavMenu>
         </Wrapper>
       </HeaderWrapper>
-      <Spacer />
     </>
   );
 };
@@ -42,9 +47,7 @@ const HeaderWrapper = styled.header`
   width: 100%;
   max-height: 500px;
   z-index: 100;
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
+
   font-family: "Open Sans", sans-serif;
 `;
 
@@ -58,16 +61,12 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.a`
+const Logo = styled(Link)`
   color: white;
   text-decoration: none;
   font-size: 32px;
   text-align: center;
   font-weight: bold;
-`;
-
-const Spacer = styled.div`
-  /* height: 80px; */
 `;
 
 const NavMenu = styled.div`
@@ -86,13 +85,19 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   cursor: pointer;
-`;
 
-const LinkNav = styled.a`
-  color: white;
-  text-transform: initial;
-  position: relative;
-  text-decoration: none;
+  > a {
+    color: white;
+    text-transform: initial;
+    position: relative;
+    text-decoration: none;
+  }
+
+  .homeActive,
+  .categActive,
+  .favoActive {
+    color: pink;
+  }
 `;
 
 export default Header;
