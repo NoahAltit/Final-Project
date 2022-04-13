@@ -74,9 +74,7 @@ input {
     padding: 0 12px;
   }
 
-  /* ::-webkit-scrollbar {
-    display: none;
-  } */
+
 
   ::-webkit-scrollbar {
     width: 0.6rem;
