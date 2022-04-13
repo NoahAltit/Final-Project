@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import bg from "../../assets/Cocktails.jpg";
 import LoadingScreen from "../Loading/LoadingScreen";
+import { Link } from "react-router-dom";
 
 const FirstSection = () => {
   const [loading, setLoading] = useState(true);
@@ -21,7 +22,7 @@ const FirstSection = () => {
             <Title>KÒKTEL</Title>
           </InnerWrap>
           <Button>
-            <a href="/video">Begin The Adventure 🌴</a>
+            <Link to="/video">Begin The Adventure 🌴</Link>
           </Button>
         </Wrapper>
       ) : (
