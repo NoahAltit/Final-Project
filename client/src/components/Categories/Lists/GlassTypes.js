@@ -102,7 +102,7 @@ const GlassTypes = () => {
 };
 
 const Section = styled.section`
-  height: 100vh;
+  height: max-content;
   display: flex;
   flex-direction: column;
   /* margin-bottom: 100px; */
@@ -125,7 +125,7 @@ const Title = styled.h1`
 `;
 
 const GlassWrap = styled.div`
-  width: 300px;
+  width: 250px;
   /* height: 350px; */
   display: flex;
   flex-direction: column;
@@ -161,6 +161,7 @@ const GlassWrap = styled.div`
 
   .icon {
     font-size: 30px;
+    /* width: 30px; */
   }
 `;
 

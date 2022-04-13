@@ -129,7 +129,7 @@ const CategoryList = () => {
 };
 
 const Section = styled.section`
-  height: auto;
+  width: 100vw;
   margin-top: 50px;
   margin-bottom: 100px;
 `;
@@ -138,7 +138,7 @@ const Wrapper = styled.div`
   display: grid;
   color: white;
   grid-template-columns: repeat(5, max-content);
-  gap: 3rem 3rem;
+  gap: 3rem 2rem;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;

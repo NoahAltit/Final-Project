@@ -13,6 +13,8 @@ const {
   getCategoryList,
   getGlassList,
   getIngredientList,
+  loginAccount,
+  createAccount,
 } = require("./handlersLocal");
 
 express()
@@ -39,11 +41,16 @@ express()
   .get("/category/:categoryName", getCocktailsByCategory)
   .get("/glass/:glassType", getCocktailsByGlassType)
 
-  // ====== Extras ====== //
+  // ====== Lists ====== //
   .get("/categoryList", getCategoryList)
   .get("/glassList", getGlassList)
   .get("/ingredientsList", getIngredientList)
-  // ====== Extras ====== //
+  // ====== Lists ====== //
+
+  // ====== Account ====== //
+  .post("/login-account", loginAccount)
+  .post("/create-account", createAccount)
+  // ====== Account ====== //
 
   // REST Endpoints
 
