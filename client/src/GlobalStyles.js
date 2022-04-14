@@ -4,7 +4,8 @@ export default createGlobalStyle`
   :root {
     /* background-color: #050503; */
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    /* font-family: "Raleway", sans-serif; */
+    font-family: "Montserrat", sans-serif;
   }
 
   html, body, div, span, applet, object, iframe,

@@ -68,7 +68,56 @@ const createAccount = async (req, res) => {
   client.close();
 };
 
+const getFavorites = async (req, res) => {
+  try {
+    await client.connect();
+
+    const favorites = await db.collection("favorites").find().toArray();
+
+    if (favorites.length > 0) {
+      res.status(200).json({ status: 200, data: favorites });
+    } else {
+      res.satus(404).json({
+        status: 404,
+        message: "Nothing to see here!",
+      });
+    }
+  } catch (err) {
+    console.log(err.error);
+  }
+  client.close();
+};
+
+const addFavorites = async (req, res) => {
+  try {
+    await client.connect();
+
+    const { idDrink, strDrink, strDrinkThumb } = req.body;
+    const favorites = await db
+      .collection("favorites")
+      .find({ idDrink: idDrink })
+      .toArray();
+    // console.log(favorites);
+
+    if (favorites.length > 0) {
+      res
+        .status(400)
+        .json({ status: 400, message: "Drink already in favorites." });
+    } else {
+      await db
+        .collection("favorites")
+        .insertOne({ idDrink, strDrink, strDrinkThumb });
+      res.status(201).json({ status: 201, data: req.body });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  client.close();
+};
+
 module.exports = {
   loginAccount,
   createAccount,
+  getFavorites,
+  addFavorites,
 };

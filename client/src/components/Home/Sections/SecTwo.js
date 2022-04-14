@@ -73,6 +73,8 @@ const Wrapper = styled.div`
 
 const Title = styled.h3`
   letter-spacing: 2px;
+  font-size: 40px;
+  margin-top: 20px;
   font-family: "Montserrat", sans-serif;
 `;
 

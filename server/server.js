@@ -13,11 +13,14 @@ const {
   getCategoryList,
   getGlassList,
   getIngredientList,
-  getFavorites,
-  addFavorites,
 } = require("./handlersLocal");
 
-const { loginAccount, createAccount } = require("./handlers");
+const {
+  loginAccount,
+  createAccount,
+  getFavorites,
+  addFavorites,
+} = require("./handlers");
 
 express()
   .use(function (req, res, next) {

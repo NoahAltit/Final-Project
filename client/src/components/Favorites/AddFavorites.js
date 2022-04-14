@@ -1,42 +1,43 @@
 import { useEffect, useState } from "react";
 import { BsHeartFill } from "react-icons/bs";
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-const AddFavorites = () => {
+const AddFavorites = ({ idDrink, strDrink, strDrinkThumb }) => {
   const [text, setText] = useState("Add to Favorites");
   const [style, setStyle] = useState("white");
-  const [favorites, setFavorites] = useState([]);
-  const { drinkName } = useParams();
+  const [favorited, setFavorited] = useState(false);
 
-  const handleClick = () => {
-    setStyle("red");
-    setText("Added to Favorites!");
-
-    fetch(`/name/${drinkName}`)
+  const handleAddToFavorite = () => {
+    fetch("/favorites/add", {
+      method: "POST",
+      body: JSON.stringify({ idDrink, strDrink, strDrinkThumb }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
       .then((res) => res.json())
       .then((data) => {
-        const newFavorites = [...favorites, data.data.drinks];
-        console.log(newFavorites);
-        setFavorites(newFavorites);
+        console.log(data);
+        if (data.status === 201) {
+          setStyle("red");
+          setText("Added to Favorites!");
+        } else if (data.status === 400) {
+          setText("Already in Favorites!");
+        }
       });
   };
 
   return (
-    <FavoriteWrap
-      onClick={() => {
-        handleClick();
-      }}
-      // onClick={() => {
-      //   style === "white" ? setStyle("red") : setStyle("white");
-      //   text === "Add to Favorites"
-      //     ? setText("Added to Favorites!")
-      //     : setText("Add to Favorites");
-      // }}
-    >
-      <Text>{text}</Text>
-      <BsHeartFill className="icon" style={{ color: style }} />
-    </FavoriteWrap>
+    <>
+      <FavoriteWrap
+        onClick={() => {
+          handleAddToFavorite();
+        }}
+      >
+        <Text>{text}</Text>
+        <BsHeartFill className="icon" style={{ color: style }} />
+      </FavoriteWrap>
+    </>
   );
 };
 

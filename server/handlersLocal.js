@@ -1,5 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
+const favorites = require("./data/favorites.json");
+
 const getCocktailsByLetter = async (req, res) => {
   try {
     const drinkLetter = req.params.drinkLetter;
@@ -129,18 +131,6 @@ const getIngredientList = async (req, res) => {
   }
 };
 
-const getFavorites = async (req, res) => {
-  try {
-    let favorites = [];
-
-    res.status(200).json({ status: 200, data: favorites });
-  } catch (err) {
-    console.log(err);
-  }
-};
-
-const addFavorites = (req, res) => {};
-
 module.exports = {
   getCocktailsByLetter,
   getCocktailsByName,
@@ -149,6 +139,4 @@ module.exports = {
   getCategoryList,
   getGlassList,
   getIngredientList,
-  getFavorites,
-  addFavorites,
 };

@@ -8,7 +8,6 @@ import AddFavorites from "../Favorites/AddFavorites";
 
 const Ingredients = () => {
   const [ingredients, setIngredients] = useState(null);
-  const [favorites, setFavorites] = useState([]);
   const { drinkName } = useParams();
 
   const history = useHistory();
@@ -24,16 +23,6 @@ const Ingredients = () => {
   if (!ingredients) {
     return <p></p>;
   }
-
-  // const addToFavorites = () => {
-  //   fetch(`/name/${drinkName}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const newFavorites = [...favorites, data.data.drinks];
-  //       console.log(newFavorites);
-  //       setFavorites(newFavorites);
-  //     });
-  // };
 
   return (
     <Section>
@@ -59,8 +48,11 @@ const Ingredients = () => {
                   <Instructions>
                     <strong>Instructions:</strong> {drink.strInstructions}
                   </Instructions>
-                  {/* <AddFavorites handleAddFavorites={addToFavorites} /> */}
-                  <AddFavorites />
+                  <AddFavorites
+                    idDrink={drink.idDrink}
+                    strDrink={drink.strDrink}
+                    strDrinkThumb={drink.strDrinkThumb}
+                  />
                 </Description>
               </Info>
               <Details>
