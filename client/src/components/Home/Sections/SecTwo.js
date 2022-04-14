@@ -1,6 +1,8 @@
+import styled from "styled-components";
+
+import bg from "../../../assets/BackG.jpg";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
-import styled from "styled-components";
 import { DrinksContext } from "../../Hooks/useContext";
 
 const SecTwo = () => {
@@ -14,7 +16,7 @@ const SecTwo = () => {
   return (
     <Section>
       <Wrapper>
-        <Title>Cocktails of the Day</Title>
+        <Title>Cocktails Anyone?</Title>
         <CocktailsWrapper>
           {drinks.drinks.map((drink) => {
             return (
@@ -24,7 +26,7 @@ const SecTwo = () => {
                   onClick={() => history.push(`/name/${drink.strDrink}`)}
                 >
                   <CocktailImg src={drink.strDrinkThumb} />
-                  <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
+                  <CocktailName>{drink.strDrink}</CocktailName>
                 </RandomCocktails>
               </>
             );
@@ -37,7 +39,7 @@ const SecTwo = () => {
                   onClick={() => history.push(`/name/${drink.strDrink}`)}
                 >
                   <CocktailImg src={drink.strDrinkThumb} />
-                  <CocktailName>{drink.strDrink.toUpperCase()}</CocktailName>
+                  <CocktailName>{drink.strDrink}</CocktailName>
                 </RandomCocktails>
               </>
             );
@@ -53,7 +55,10 @@ const Section = styled.section`
   width: 100vw;
   display: grid;
   overflow: hidden;
-  background-color: #1f1f1f;
+  /* background-color: black; */
+  /* background-image: url(${bg});
+  background-size: cover;
+  background-position: bottom; */
 `;
 
 const Wrapper = styled.div`
@@ -67,7 +72,8 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
 `;
 
 const CocktailsWrapper = styled.div`
@@ -99,10 +105,9 @@ const CocktailImg = styled.img`
 `;
 
 const CocktailName = styled.p`
-  font-size: 30px;
-  letter-spacing: 5px;
+  font-size: 25px;
   margin-top: 20px;
-  font-family: "Cleavers Juvenia";
+  font-family: "Montserrat", sans-serif;
 `;
 
 export default SecTwo;
