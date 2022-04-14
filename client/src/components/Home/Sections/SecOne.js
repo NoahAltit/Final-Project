@@ -94,7 +94,7 @@ from {
   width: 0;
 }
 to {
-  width: 85%;
+  width: 96%;
 }
 `;
 
@@ -109,7 +109,7 @@ from, to {
 `;
 
 const CircularText = styled.p`
-  width: 470px;
+  /* width: 470px; */
   font-size: 25px;
   overflow: hidden;
   border-right: 2px solid grey;

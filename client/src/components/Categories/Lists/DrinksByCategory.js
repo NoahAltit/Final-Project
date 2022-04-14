@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { BsArrowLeftCircle } from "react-icons/bs";
+import AddFavorites from "../../Favorites/AddFavorites";
 
 const DrinksByCategory = () => {
   const { categoryName } = useParams();
@@ -21,6 +22,7 @@ const DrinksByCategory = () => {
   if (!drinks) {
     return <p></p>;
   }
+
   return (
     <Section>
       <Title>{` ${categoryName.toUpperCase()}`}</Title>

@@ -1,33 +1,27 @@
-// const fetch = require("isomorphic-fetch");
+const favorites = require("./data/favorites.json");
 
-// const { MongoClient } = require("mongodb");
+const { MongoClient } = require("mongodb");
 
-// require("dotenv").config();
-// const { MONGO_URI } = process.env;
+require("dotenv").config();
+const { MONGO_URI } = process.env;
 
-// const options = {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// };
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 
-// const client = new MongoClient(MONGO_URI, options);
-// const db = client.db("Koktel");
+const client = new MongoClient(MONGO_URI, options);
+const db = client.db("Koktel");
 
-// const batchImport = async () => {
-//   try {
-//     await client.connect();
+const batchImport = async () => {
+  try {
+    await client.connect();
 
-//     const letter = "a";
+    await db.collection("favorites").insertMany(favorites);
+  } catch (err) {
+    console.log(err);
+  }
+  client.close();
+};
 
-//     const url = await fetch(
-//       `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
-//     );
-
-//     await db.collection("cocktailsByLetter").insertOne(url);
-//   } catch (err) {
-//     console.log(err);
-//   }
-//   client.close();
-// };
-
-// batchImport();
+batchImport();
