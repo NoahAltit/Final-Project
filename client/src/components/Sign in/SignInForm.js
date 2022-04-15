@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 
 const SignInForm = ({ setPageDisplay }) => {
   const [userInfo, setUserInfo] = useState(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const history = useHistory();
 
   const handleSubmit = (ev) => {
@@ -25,8 +26,12 @@ const SignInForm = ({ setPageDisplay }) => {
         // console.log(data);
         if (data.status === 201) {
           setUserInfo(data.data);
+          setIsLoggedIn(true);
+          localStorage.getItem("isLoggedIn");
+          localStorage.setItem("isLoggedIn", "1");
           history.push("/adventure");
         } else {
+          setIsLoggedIn(isLoggedIn);
           setPageDisplay({
             message: data.message,
             status: data.status,
