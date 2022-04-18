@@ -31,6 +31,7 @@ const DrinksByGlassTypes = () => {
         {drinks.drinks.map((drink) => {
           return (
             <InnerWrapper
+              key={drink.idDrink}
               onClick={() => history.push(`/name/${drink.strDrink}`)}
             >
               <DrinkImg src={drink.strDrinkThumb} />

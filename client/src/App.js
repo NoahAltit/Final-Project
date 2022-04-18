@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import Categories from "./components/Categories/Categories";
 import CocktailList from "./components/Categories/Lists/CocktailList";
 import DrinksByCategory from "./components/Categories/Lists/DrinksByCategory";
@@ -17,9 +17,17 @@ const App = () => {
       <GlobalStyles />
       <BrowserRouter>
         <Switch>
-          <Route exact path={"/"}>
-            <SignIn />
-          </Route>
+          <Route
+            exact
+            path={"/"}
+            render={() =>
+              localStorage.getItem("isLoggedIn") ? (
+                <Redirect to={"/adventure"} />
+              ) : (
+                <SignIn />
+              )
+            }
+          ></Route>
           <Route path={"/adventure"}>
             <Debut />
           </Route>
