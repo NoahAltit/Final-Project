@@ -78,7 +78,7 @@ const CategoryList = () => {
 
         <CategWrap
           className="coftea"
-          // onClick={() => history.push("/category/coftea")}
+          // onClick={() => history.push("/category/coffe / tea")}
         >
           <CategImg src={coftea} />
           <CategName>Coffee / Tea</CategName>
@@ -94,7 +94,7 @@ const CategoryList = () => {
 
         <CategWrap
           className="party"
-          // onClick={() => history.push("/category/")}
+          // onClick={() => history.push("/category/punch / party drink")}
         >
           <CategImg src={party} />
           <CategName>Party Drink</CategName>
@@ -118,7 +118,7 @@ const CategoryList = () => {
 
         <CategWrap
           className="mystery"
-          onClick={() => history.push("/category/Other/Unknown")}
+          // onClick={() => history.push("/category/Other/Unknown")}
         >
           <CategImg src={mystery} />
           <CategName>Mystery</CategName>
@@ -233,7 +233,7 @@ const CategImg = styled.img`
 
 const CategName = styled.h1`
   font-size: 24px;
-  padding: 0 80px;
+  padding: 0 75px;
   margin-bottom: 20px;
   padding-bottom: 20px;
   z-index: 5;

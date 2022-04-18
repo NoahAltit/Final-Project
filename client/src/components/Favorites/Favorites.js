@@ -62,6 +62,7 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   margin-top: 30px;
+  margin-bottom: 50px;
 `;
 
 const InnerWrapper = styled.div`

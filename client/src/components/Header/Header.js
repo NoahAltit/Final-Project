@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { Link, NavLink } from "react-router-dom";
 
@@ -40,15 +40,12 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.header`
-  /* background-color: transparent; */
   background-color: black;
   color: white;
   height: 80px;
   width: 100%;
   max-height: 500px;
   z-index: 100;
-
-  font-family: "Open Sans", sans-serif;
 `;
 
 const Wrapper = styled.div`
@@ -64,9 +61,9 @@ const Wrapper = styled.div`
 const Logo = styled(Link)`
   color: white;
   text-decoration: none;
-  font-size: 32px;
+  font-weight: 600;
+  font-size: 30px;
   text-align: center;
-  font-weight: bold;
 `;
 
 const NavMenu = styled.div`
@@ -83,8 +80,18 @@ const NavList = styled.ul`
   list-style: none;
 `;
 
+const fadeIn = keyframes`
+from, to {
+  text-decoration-color: transparent;
+} 
+to {
+  text-decoration-color: pink;
+}
+`;
+
 const NavItem = styled.li`
   cursor: pointer;
+  transition: all 0.3s ease;
 
   > a {
     color: white;
@@ -96,7 +103,16 @@ const NavItem = styled.li`
   .homeActive,
   .categActive,
   .favoActive {
+    transition: all 0.3s ease-in-out;
     color: pink;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    animation: ${fadeIn} 2s infinite;
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
   }
 `;
 

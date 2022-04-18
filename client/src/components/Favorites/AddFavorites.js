@@ -5,7 +5,6 @@ import styled from "styled-components";
 const AddFavorites = ({ idDrink, strDrink, strDrinkThumb }) => {
   const [text, setText] = useState("Add to Favorites");
   const [style, setStyle] = useState("white");
-  const [favorited, setFavorited] = useState(false);
 
   const handleAddToFavorite = () => {
     fetch("/favorites/add", {
