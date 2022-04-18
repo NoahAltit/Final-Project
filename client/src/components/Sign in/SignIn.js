@@ -6,12 +6,20 @@ import SignInForm from "./SignInForm";
 import SignUpForm from "./SignUpForm";
 import Message from "./Message";
 import bg from "../../assets/Bg.jpg";
+import Modal from "../Bday Modal/Modal";
 
 const SignIn = () => {
   const [pageDisplay, setPageDisplay] = useState("signin");
+  const [show, setShow] = useState(true);
+
+  const handleClose = () => {
+    setShow(false);
+  };
 
   return (
     <PageWrapper>
+      {/* {show && <Modal handleClose={handleClose} />} */}
+      <Modal />
       <ContentWrapper>
         <Details>
           {pageDisplay === "signin" && (
