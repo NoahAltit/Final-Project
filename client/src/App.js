@@ -22,7 +22,7 @@ const App = () => {
             path={"/"}
             render={() =>
               localStorage.getItem("isLoggedIn") ? (
-                <Redirect to={"/adventure"} />
+                <Redirect to={"/home"} />
               ) : (
                 <SignIn />
               )
