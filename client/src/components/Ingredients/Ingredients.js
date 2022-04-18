@@ -57,7 +57,8 @@ const Ingredients = () => {
               </Info>
               <Details>
                 <IngredientsWrap>
-                  {drink.strIngredient1 === null ? null : (
+                  {drink.strIngredient1 === null ||
+                  drink.strMeasure1 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient1}.png`}
@@ -67,7 +68,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure1})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient2 === null ? null : (
+                  {drink.strIngredient2 === null ||
+                  drink.strMeasure2 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient2}.png`}
@@ -78,7 +80,8 @@ const Ingredients = () => {
                     </InnerWrap>
                   )}
 
-                  {drink.strIngredient3 === null ? null : (
+                  {drink.strIngredient3 === null ||
+                  drink.strMeasure3 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient3}.png`}
@@ -88,7 +91,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure3})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient4 === null ? null : (
+                  {drink.strIngredient4 === null ||
+                  drink.strMeasure4 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient4}.png`}
@@ -98,7 +102,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure4})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient5 === null ? null : (
+                  {drink.strIngredient5 === null ||
+                  drink.strMeasure5 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient5}.png`}
@@ -108,7 +113,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure5})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient6 === null ? null : (
+                  {drink.strIngredient6 === null ||
+                  drink.strMeasure6 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient6}.png`}
@@ -118,7 +124,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure6})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient7 === null ? null : (
+                  {drink.strIngredient7 === null ||
+                  drink.strMeasure7 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient7}.png`}
@@ -128,7 +135,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure7})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient8 === null ? null : (
+                  {drink.strIngredient8 === null ||
+                  drink.strMeasure8 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient8}.png`}
@@ -138,7 +146,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure8})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient9 === null ? null : (
+                  {drink.strIngredient9 === null ||
+                  drink.strMeasure9 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient9}.png`}
@@ -148,7 +157,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure9})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient10 === null ? null : (
+                  {drink.strIngredient10 === null ||
+                  drink.strMeasure10 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient10}.png`}
@@ -158,7 +168,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure10})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient11 === null ? null : (
+                  {drink.strIngredient11 === null ||
+                  drink.strMeasure11 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient11}.png`}
@@ -168,7 +179,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure11})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient12 === null ? null : (
+                  {drink.strIngredient12 === null ||
+                  drink.strMeasure12 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient12}.png`}
@@ -178,7 +190,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure12})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient13 === null ? null : (
+                  {drink.strIngredient13 === null ||
+                  drink.strMeasure13 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient13}.png`}
@@ -188,7 +201,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure13})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient14 === null ? null : (
+                  {drink.strIngredient14 === null ||
+                  drink.strMeasure14 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient14}.png`}
@@ -198,7 +212,8 @@ const Ingredients = () => {
                       <Measure>({drink.strMeasure14})</Measure>
                     </InnerWrap>
                   )}
-                  {drink.strIngredient15 === null ? null : (
+                  {drink.strIngredient15 === null ||
+                  drink.strMeasure15 === "" ? null : (
                     <InnerWrap>
                       <IngredientImg
                         src={`https://www.thecocktaildb.com/images/ingredients/${drink.strIngredient15}.png`}
