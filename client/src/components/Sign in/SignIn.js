@@ -55,6 +55,12 @@ const ContentWrapper = styled.div`
   justify-content: center;
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+
+  @media (max-width: 910px) {
+    > img {
+      display: none;
+    }
+  }
 `;
 
 const Details = styled.div`
@@ -64,6 +70,10 @@ const Details = styled.div`
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 20px;
+
+  @media (max-width: 910px) {
+    border-radius: 10px;
+  }
 `;
 
 const BgImg = styled.img`

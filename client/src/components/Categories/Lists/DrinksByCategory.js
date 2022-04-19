@@ -26,9 +26,9 @@ const DrinksByCategory = () => {
   return (
     <Section>
       <Title>{` ${categoryName.toUpperCase()}`}</Title>
-      <Icon onClick={() => history.push("/categories")}>
+      {/* <Icon onClick={() => history.push("/categories")}>
         <BsArrowLeftCircle className="icon" /> Categories
-      </Icon>
+      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (
@@ -65,6 +65,10 @@ const Wrapper = styled.div`
   margin-right: auto;
   margin-bottom: 20px;
   padding-top: 2rem;
+
+  @media (max-width: 1405px) {
+    grid-template-columns: repeat(3, max-content);
+  }
 `;
 
 const Title = styled.h1`
@@ -92,6 +96,21 @@ const Icon = styled.div`
   .icon {
     margin-right: 10px;
     font-size: 30px;
+  }
+
+  @media (max-width: 1705px) {
+    font-size: 13px;
+    .icon {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1645px) {
+    display: none;
+  }
+
+  @media (max-width: 1405px) {
+    display: flex;
   }
 `;
 

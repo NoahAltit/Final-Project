@@ -24,9 +24,9 @@ const DrinksByGlassTypes = () => {
   return (
     <Section>
       <Title>{` ${glassType.toUpperCase()}`}</Title>
-      <Icon onClick={() => history.push("/categories")}>
+      {/* <Icon onClick={() => history.push("/categories")}>
         <BsArrowLeftCircle className="icon" /> Categories
-      </Icon>
+      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (

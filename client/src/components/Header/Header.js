@@ -2,13 +2,9 @@
 import styled, { keyframes } from "styled-components";
 
 import { Link, NavLink } from "react-router-dom";
+import { CgMenuGridO } from "react-icons/cg";
 
 const Header = () => {
-  //   const [showHeader, setShowHeader] = useState(false);
-  // When Scrolling to a certain position, show header
-  // Make it transparent at first, then small transition
-  //  to background header color
-
   return (
     <>
       <HeaderWrapper>
@@ -30,6 +26,9 @@ const Header = () => {
                 <NavLink to="/favorites" activeClassName="favoActive">
                   Favorites
                 </NavLink>
+              </NavItem>
+              <NavItem className="menu">
+                <CgMenuGridO />
               </NavItem>
             </NavList>
           </NavMenu>
@@ -56,6 +55,11 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1050px) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 `;
 
 const Logo = styled(Link)`
@@ -113,6 +117,21 @@ const NavItem = styled.li`
   &:hover {
     text-decoration: underline;
     text-underline-offset: 10px;
+  }
+
+  @media (min-width: 701px) {
+    &.menu {
+      display: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    display: none;
+
+    &.menu {
+      font-size: 30px;
+      display: block;
+    }
   }
 `;
 
