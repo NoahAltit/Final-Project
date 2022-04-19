@@ -37,6 +37,10 @@ const Img = styled.img`
   width: 100%;
   background-size: auto 100%;
   filter: brightness(35%);
+
+  @media (max-width: 1300px) {
+    width: fit-content;
+  }
 `;
 
 const InnerWrap = styled.div`
@@ -115,11 +119,19 @@ const CircularText = styled.p`
   border-right: 2px solid grey;
   white-space: nowrap;
   animation: ${typing} 5s steps(40, end), ${blink} 0.75s step-end infinite;
+
+  @media (max-width: 1300px) {
+    font-size: 22px;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 120px;
   letter-spacing: 10px;
+
+  @media (max-width: 1300px) {
+    font-size: 100px;
+  }
 `;
 
 export default SecOne;

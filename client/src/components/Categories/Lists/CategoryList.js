@@ -143,6 +143,10 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
+
+  @media (max-width: 1435px) {
+    grid-template-columns: repeat(4, max-content);
+  }
 `;
 
 const Title = styled.h1`
@@ -159,6 +163,10 @@ const CategWrap = styled.div`
   border-radius: 100px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+
+  @media (max-width: 1705px) {
+    width: 250px;
+  }
 
   &.ordinary {
     background-image: radial-gradient(

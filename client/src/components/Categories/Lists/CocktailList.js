@@ -26,9 +26,9 @@ const CocktailList = () => {
   return (
     <>
       <Title>{` ${drinkLetter.toUpperCase()}`}</Title>
-      <Icon onClick={() => history.push("/categories")}>
+      {/* <Icon onClick={() => history.push("/categories")}>
         <BsArrowLeftCircle className="icon" /> Categories
-      </Icon>
+      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (

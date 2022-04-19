@@ -29,14 +29,14 @@ const Ingredients = () => {
       {ingredients.map((drink) => {
         return (
           <>
-            <Icon
+            {/* <Icon
               onClick={() => history.push(`/category/${drink.strCategory}`)}
             >
               <BsArrowLeftCircle className="icon" /> Drink Category
             </Icon>
             <Icon2 onClick={() => history.push(`/glass/${drink.strGlass}`)}>
               Glass Type <BsArrowRightCircle className="icon2" />
-            </Icon2>
+            </Icon2> */}
             <Title>{drink.strDrink}</Title>
             <Wrapper>
               <Info>

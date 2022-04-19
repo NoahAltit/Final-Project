@@ -73,6 +73,18 @@ const Letter = styled(Link)`
     background-color: deepskyblue;
     border-radius: 50%;
   }
+
+  @media (max-width: 1855px) {
+    margin: 19px;
+  }
+
+  @media (max-width: 1705px) {
+    margin: 15px;
+  }
+
+  @media (max-width: 1435px) {
+    font-size: 15px;
+  }
 `;
 
 export default LetterIndex;

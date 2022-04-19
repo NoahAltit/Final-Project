@@ -118,6 +118,10 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 2rem;
+
+  @media (max-width: 1435px) {
+    grid-template-columns: repeat(4, max-content);
+  }
 `;
 
 const Title = styled.h1`
@@ -163,6 +167,14 @@ const GlassWrap = styled.div`
     font-size: 30px;
     /* width: 30px; */
   }
+
+  @media (max-width: 1705px) {
+    width: 200px;
+  }
+
+  @media (max-width: 1435px) {
+    width: 250px;
+  }
 `;
 
 const GlassImg = styled.img`
@@ -193,6 +205,10 @@ const Glass = styled.li`
 
   &:hover {
     opacity: 0.3;
+  }
+
+  @media (max-width: 1705px) {
+    font-size: 18px;
   }
 `;
 

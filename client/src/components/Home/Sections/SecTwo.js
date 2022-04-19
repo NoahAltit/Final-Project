@@ -82,6 +82,10 @@ const Title = styled.h3`
   font-size: 40px;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 750px) {
+    font-size: 35px;
+  }
 `;
 
 const InnerWrapper = styled.div`
@@ -99,6 +103,11 @@ const CocktailsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin: auto;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    margin-bottom: -30px;
+  }
 `;
 
 const RandomCocktails = styled.div`
@@ -109,6 +118,10 @@ const RandomCocktails = styled.div`
   justify-content: center;
   margin: 0 30px;
   transition: all 0.4s ease-in-out;
+
+  @media (max-width: 750px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const CocktailImg = styled.img`
@@ -121,12 +134,20 @@ const CocktailImg = styled.img`
     transform: scale(0.97);
     cursor: pointer;
   }
+
+  @media (max-width: 1050px) {
+    width: 300px;
+  }
 `;
 
 const CocktailName = styled.p`
   font-size: 25px;
   margin-top: 20px;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 1050px) {
+    font-size: 22px;
+  }
 `;
 
 export default SecTwo;

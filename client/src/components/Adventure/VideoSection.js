@@ -65,6 +65,12 @@ const Icon = styled.div`
   > a:hover {
     color: #f6834f;
   }
+
+  @media (max-width: 768px) {
+    > a {
+      font-size: 30px;
+    }
+  }
 `;
 
 export default VideoSection;
