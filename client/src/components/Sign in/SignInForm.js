@@ -14,7 +14,7 @@ const SignInForm = ({ setPageDisplay }) => {
     let email = ev.target[0].value;
     let password = ev.target[1].value;
 
-    fetch("/login-account", {
+    fetch("http://localhost:4000/login-account", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {

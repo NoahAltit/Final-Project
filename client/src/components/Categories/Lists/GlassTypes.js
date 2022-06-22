@@ -17,10 +17,9 @@ const GlassTypes = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("/glassList")
+    fetch("http://localhost:4000/glassList")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.data);
         setGlasses(data.data);
       });
   }, []);
@@ -105,7 +104,6 @@ const Section = styled.section`
   height: max-content;
   display: flex;
   flex-direction: column;
-  /* margin-bottom: 100px; */
 `;
 
 const Wrapper = styled.div`
@@ -130,7 +128,6 @@ const Title = styled.h1`
 
 const GlassWrap = styled.div`
   width: 250px;
-  /* height: 350px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +162,6 @@ const GlassWrap = styled.div`
 
   .icon {
     font-size: 30px;
-    /* width: 30px; */
   }
 
   @media (max-width: 1705px) {

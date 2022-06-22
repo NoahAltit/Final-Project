@@ -9,10 +9,9 @@ const Favorites = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("/favorites")
+    fetch("http://localhost:4000/favorites")
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.data);
         setFavorites(data.data);
       });
   }, []);

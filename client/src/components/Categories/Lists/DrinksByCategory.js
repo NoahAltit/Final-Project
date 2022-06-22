@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { BsArrowLeftCircle } from "react-icons/bs";
-import AddFavorites from "../../Favorites/AddFavorites";
 
 const DrinksByCategory = () => {
   const { categoryName } = useParams();
@@ -11,7 +9,7 @@ const DrinksByCategory = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`/category/${categoryName}`)
+    fetch(`http://localhost:4000/category/${categoryName}`)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -26,9 +24,6 @@ const DrinksByCategory = () => {
   return (
     <Section>
       <Title>{` ${categoryName.toUpperCase()}`}</Title>
-      {/* <Icon onClick={() => history.push("/categories")}>
-        <BsArrowLeftCircle className="icon" /> Categories
-      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (

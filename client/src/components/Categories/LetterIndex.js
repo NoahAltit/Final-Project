@@ -1,12 +1,8 @@
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
-import { BsArrowLeftCircle } from "react-icons/bs";
-import { useHistory } from "react-router-dom";
 
 const LetterIndex = () => {
-  const history = useHistory();
-
   return (
     <>
       <Wrapper>
@@ -52,7 +48,6 @@ const Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /* background-color: #5f99fa; */
   background-image: linear-gradient(
     109.6deg,
     rgba(45, 116, 213, 1) 11.2%,
