@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import ordinary from "../../../assets/Categories/Ordinary.png";
@@ -15,22 +15,21 @@ import soft from "../../../assets/Categories/Soft.png";
 import mystery from "../../../assets/Categories/Mystery.png";
 
 const CategoryList = () => {
-  // const [categories, setCategories] = useState(null);
-
-  // useEffect(() => {
-  //   fetch("/categoryList")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data.data);
-  //       setCategories(data.data);
-  //     });
-  // }, []);
-
-  // if (!categories) {
-  //   return <p></p>;
-  // }
-
+  const [categories, setCategories] = useState(null);
   const history = useHistory();
+
+  useEffect(() => {
+    fetch("http://localhost:4000/categoryList")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.data);
+        setCategories(data.data);
+      });
+  }, []);
+
+  if (!categories) {
+    return <p></p>;
+  }
 
   return (
     <Section>

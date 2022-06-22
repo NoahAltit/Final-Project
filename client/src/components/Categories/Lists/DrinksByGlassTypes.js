@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import { BsArrowLeftCircle } from "react-icons/bs";
 
 const DrinksByGlassTypes = () => {
   const { glassType } = useParams();
@@ -10,10 +9,9 @@ const DrinksByGlassTypes = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`/glass/${glassType}`)
+    fetch(`http://localhost:4000/glass/${glassType}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data);
         setDrinks(data.data);
       });
   }, []);
@@ -24,9 +22,6 @@ const DrinksByGlassTypes = () => {
   return (
     <Section>
       <Title>{` ${glassType.toUpperCase()}`}</Title>
-      {/* <Icon onClick={() => history.push("/categories")}>
-        <BsArrowLeftCircle className="icon" /> Categories
-      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (
@@ -67,30 +62,6 @@ const Wrapper = styled.div`
 
 const Title = styled.h1`
   margin: 100px 0;
-`;
-
-const Icon = styled.div`
-  position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  margin-left: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  letter-spacing: 2px;
-
-  &:hover {
-    opacity: 0.7;
-  }
-
-  .icon {
-    margin-right: 10px;
-    font-size: 30px;
-  }
 `;
 
 const InnerWrapper = styled.div`

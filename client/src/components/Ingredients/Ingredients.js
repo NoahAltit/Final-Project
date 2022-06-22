@@ -13,7 +13,7 @@ const Ingredients = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`/name/${drinkName}`)
+    fetch(`http://localhost:4000/name/${drinkName}`)
       .then((res) => res.json())
       .then((data) => {
         setIngredients(data.data.drinks);
@@ -29,14 +29,6 @@ const Ingredients = () => {
       {ingredients.map((drink) => {
         return (
           <>
-            {/* <Icon
-              onClick={() => history.push(`/category/${drink.strCategory}`)}
-            >
-              <BsArrowLeftCircle className="icon" /> Drink Category
-            </Icon>
-            <Icon2 onClick={() => history.push(`/glass/${drink.strGlass}`)}>
-              Glass Type <BsArrowRightCircle className="icon2" />
-            </Icon2> */}
             <Title>{drink.strDrink}</Title>
             <Wrapper>
               <Info>

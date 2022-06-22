@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { BsArrowLeftCircle } from "react-icons/bs";
 
 const CocktailList = () => {
   const { drinkLetter } = useParams();
@@ -12,10 +11,9 @@ const CocktailList = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`/letter/${drinkLetter}`)
+    fetch(`http://localhost:4000/letter/${drinkLetter}`)
       .then((res) => res.json())
       .then((data) => {
-        // console.log(data.data);
         setDrinks(data.data);
       });
   }, []);
@@ -26,9 +24,6 @@ const CocktailList = () => {
   return (
     <>
       <Title>{` ${drinkLetter.toUpperCase()}`}</Title>
-      {/* <Icon onClick={() => history.push("/categories")}>
-        <BsArrowLeftCircle className="icon" /> Categories
-      </Icon> */}
       <Wrapper>
         {drinks.drinks.map((drink) => {
           return (

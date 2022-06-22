@@ -13,7 +13,7 @@ const SignUpForm = ({ setPageDisplay }) => {
 
     let email = ev.target[0].value;
     let password = ev.target[1].value;
-    fetch("/create-account", {
+    fetch("http://localhost:4000/create-account", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {

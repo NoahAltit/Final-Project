@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BsHeartFill } from "react-icons/bs";
 import styled from "styled-components";
 
@@ -7,7 +7,7 @@ const AddFavorites = ({ idDrink, strDrink, strDrinkThumb }) => {
   const [style, setStyle] = useState("white");
 
   const handleAddToFavorite = () => {
-    fetch("/favorites/add", {
+    fetch("http://localhost:4000/favorites/add", {
       method: "POST",
       body: JSON.stringify({ idDrink, strDrink, strDrinkThumb }),
       headers: {
