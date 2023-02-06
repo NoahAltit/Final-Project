@@ -1,8 +1,6 @@
 # KÒKTEL
 
-**KÒKTEL** is for all Cocktail lovers.
-With over 500 cocktail recipes, making cocktails has become easier than ever.
-Get the ingredients, follow the steps, and voila! A perfectly made cocktail!
+Discover the world of cocktails with our comprehensive website dedicated to all things mixed drinks. From classic favorites to creative new creations, we've got a recipe for every taste and occasion. Impress your friends at your next party with a perfectly crafted cocktail or find inspiration for your next big adventure in mixology. Our easy-to-follow recipes, combined with detailed instructions and expert tips, will have you mixing like a pro in no time. So, whether you're a seasoned bartender or just looking to try something new, our website is the ultimate destination for all your cocktail needs.
 
 **KÒKTEL** is a **Full-Stack Website** fully designed and developed by me.
 The data is provided by an external API, which is the CocktailDB API.
